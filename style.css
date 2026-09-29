@@ -425,10 +425,10 @@ body {
     background: var(--border-card);
 }
 
-/* Bento Grid */
+/* Bento Grid - Balanced 2x2 Layout */
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
@@ -467,14 +467,6 @@ body {
 
 .bento-card:hover::before {
     opacity: 1;
-}
-
-.bento-featured {
-    grid-column: span 2;
-}
-
-.bento-wide {
-    grid-column: span 3;
 }
 
 .card-icon-bubble {
@@ -784,6 +776,8 @@ body {
     line-height: 1.55;
     position: relative;
     border: 1px solid transparent;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .code-box.vulnerable {
@@ -818,6 +812,28 @@ body {
 .code-box pre {
     overflow-x: auto;
     color: #e2e8f0;
+    max-width: 100%;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 240, 255, 0.4) #050811;
+}
+
+.code-box pre::-webkit-scrollbar {
+    height: 6px;
+}
+
+.code-box pre::-webkit-scrollbar-track {
+    background: #050811;
+    border-radius: 4px;
+}
+
+.code-box pre::-webkit-scrollbar-thumb {
+    background: rgba(0, 240, 255, 0.4);
+    border-radius: 4px;
+}
+
+.code-box pre::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 240, 255, 0.8);
 }
 
 .box-verdict {
