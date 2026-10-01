@@ -1,552 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JV // Backend Architect & Exploit-Proofing Engineer | Roblox Portfolio</title>
-    <meta name="description" content="Senior Roblox Backend Architect specializing in server-authoritative physics, exploit-proofing, zero-client-trust netcode, and atomic anti-dupe data persistence.">
-    
-    <!-- Open Graph / Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#05070A">
+    <title>JV // Cybersecurity & Systems Engineer — Roblox / Luau</title>
+    <meta name="description" content="JV — Senior Cybersecurity & Systems Engineer specializing in server-authoritative physics, anti-cheat suites, zero client-trust netcode, and enterprise moderation architecture for Roblox.">
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="JV — Roblox Backend Architect & Exploit-Proofing Engineer">
+    <meta property="og:title" content="JV // Cybersecurity & Systems Engineer">
+    <meta property="og:description" content="Server-authoritative physics, anti-cheat suites, zero-trust netcode, and enterprise moderation tools for Roblox.">
+    <meta property="og:site_name" content="JV Security Labs">
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="alternate icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%2300f0ff' d='M16 2L4 7v8c0 7.5 5.5 13.5 12 15 6.5-1.5 12-7.5 12-15V7L16 2z'/></svg>">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Ambient Background Glows -->
-    <div class="ambient-glow glow-cyan" aria-hidden="true"></div>
-    <div class="ambient-glow glow-purple" aria-hidden="true"></div>
-    <div class="grid-overlay" aria-hidden="true"></div>
-    <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
+    <main class="app">
+        <!-- Interactive Cyber Defense & Orbital Threat Lattice Canvas -->
+        <canvas id="space"></canvas>
 
-    <!-- Navigation Header -->
-    <header class="navbar" id="mainNavbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-brand">
-                <span class="brand-shield">🛡️</span>
-                <span class="brand-name">JV <span class="brand-accent">//</span> LAB2</span>
-            </a>
+        <!-- Ambient Cyber Vignette & Scanlines -->
+        <div class="vignette"></div>
+        <div class="scanlines" aria-hidden="true"></div>
 
-            <nav class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#projects">Showcase</a>
-                <a href="#architecture">Architecture</a>
-                <a href="#workflow">Workflow</a>
-                <a href="#contact">Contact</a>
-            </nav>
-
-            <div class="nav-actions">
-                <div class="status-indicator" title="Accepting commissions & projects">
+        <!-- Top Header Navigation -->
+        <header class="topbar">
+            <div class="brand-block">
+                <pre class="brand">    ___ _    __   ______ _   __ ____ _____  ______ __  __
+   / (_) |  / /  / ____/| | / // __ ) ___/ / ____// / / /
+  / / /| | / /  / /     | |/ // __  / __ \ / __/  / / / / 
+ / / / | |/ /  / /___   |   // /_/ / /_/ // /___ / /_/ /  
+/_/_/  |___/   \____/   |_/ /_____/\____//_____/ \____/   </pre>
+                <div class="system-status">
                     <span class="status-dot"></span>
-                    <span class="status-text">Available for Hire</span>
+                    <span class="status-txt">THREAT MITIGATION: ACTIVE</span>
                 </div>
-                <button class="btn btn-outline btn-sm copy-discord-btn" data-discord="jorgevvv">
-                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-                    <span>Discord: jorgevvv</span>
+            </div>
+
+            <nav class="socials">
+                <a href="https://github.com/lab2SecurityProjectsR" target="_blank" rel="noopener noreferrer" class="link-item">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub ↗</span>
+                </a>
+                <button class="link-item copy-discord-btn" id="btnDiscordTop" aria-label="Copy Discord Tag">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.54 5.34A16.3 16.3 0 0 0 15.44 4a11.2 11.2 0 0 0-.52 1.07 15.2 15.2 0 0 0-4.84 0A11.2 11.2 0 0 0 9.56 4a16.4 16.4 0 0 0-4.1 1.34C2.87 9.18 2.17 12.92 2.52 16.6a16.5 16.5 0 0 0 5.03 2.54c.41-.56.77-1.15 1.08-1.77-.59-.22-1.15-.5-1.69-.82l.42-.33c3.26 1.51 6.79 1.51 10.01 0l.43.33c-.54.32-1.11.6-1.69.82.31.62.67 1.21 1.08 1.77a16.5 16.5 0 0 0 5.03-2.54c.42-4.27-.72-7.97-2.68-11.26ZM8.96 14.34c-.98 0-1.79-.9-1.79-2s.79-2 1.79-2c1.01 0 1.81.91 1.79 2 0 1.1-.79 2-1.79 2Zm6.08 0c-.98 0-1.79-.9-1.79-2s.79-2 1.79-2c1.01 0 1.81.91 1.79 2 0 1.1-.78 2-1.79 2Z"/></svg>
+                    <span id="discordTopLabel">Discord ↗</span>
                 </button>
-            </div>
-        </div>
-    </header>
+            </nav>
+        </header>
 
-    <!-- Main Content Container -->
-    <main>
-        <!-- Hero Section -->
-        <section class="section hero" id="hero">
-            <div class="container hero-content">
-                <div class="hero-badge">
-                    <span class="badge-icon">⚡</span>
-                    <span>High-Integrity Roblox Engineering & Security</span>
-                </div>
-
-                <h1 class="hero-title">
-                    Building <span class="gradient-text">Exploit-Proof</span> Systems for Developers & Studios.
-                </h1>
-
-                <p class="hero-subtitle">
-                    Senior Backend Scripter specializing in zero-client-trust architecture, server-authoritative physics, and atomic session-locking to eliminate item duplication and netcode vulnerabilities before launch.
-                </p>
-
-                <div class="hero-cta-group">
-                    <a href="#projects" class="btn btn-primary btn-lg">
-                        <span>Explore Flagship Work</span>
-                        <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary btn-lg">
-                        <span>Request Security Audit</span>
-                    </a>
-                </div>
-
-                <!-- Metrics & Principles Ribbon -->
-                <div class="metrics-ribbon">
-                    <div class="metric-card">
-                        <span class="metric-val">0%</span>
-                        <span class="metric-label">Client Trust Invariants</span>
-                    </div>
-                    <div class="metric-divider"></div>
-                    <div class="metric-card">
-                        <span class="metric-val">100%</span>
-                        <span class="metric-label">Server Authority Validation</span>
-                    </div>
-                    <div class="metric-divider"></div>
-                    <div class="metric-card">
-                        <span class="metric-val">Sub-Frame</span>
-                        <span class="metric-label">Raycast Trajectory Auditing</span>
-                    </div>
-                    <div class="metric-divider"></div>
-                    <div class="metric-card">
-                        <span class="metric-val">Atomic</span>
-                        <span class="metric-label">Anti-Dupe Session Locking</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section (Bento Grid) -->
-        <section class="section services" id="services">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p class="section-tag">ENGINEERING SPECIALIZATIONS</p>
-                    <h2 class="section-title">What I Build For Your Game</h2>
-                    <p class="section-desc">Designed for high-traffic games, competitive experiences, and economies where a single exploit ruins thousands of players' experience.</p>
-                </div>
-
-                <div class="bento-grid">
-                    <!-- Bento 1: Exploit-Proofing & Hardening -->
-                    <div class="bento-card">
-                        <div class="card-icon-bubble cyan-bubble">🛡️</div>
-                        <h3>Exploit-Proofing & Vulnerability Hardening</h3>
-                        <p>Complete defense-in-depth security layer. We harden every RemoteEvent and RemoteFunction against packet flooding, type-injection attacks, and parameter tampering.</p>
-                        <ul class="feature-bullets">
-                            <li><strong>Token-Bucket Rate Limiter:</strong> Drops spam bursts before they cause server degradation.</li>
-                            <li><strong>Type Sanitizer:</strong> Rejects <code>NaN</code>, infinites, cyclic tables, and oversized strings.</li>
-                            <li><strong>Sanity Invariants:</strong> Server validates all transaction bounds independently.</li>
-                        </ul>
-                        <div class="card-badge">Zero Backdoors // Hardened Netcode</div>
+        <!-- Presentation Stage (Deck Scenes) -->
+        <div class="stage">
+            
+            <!-- SCENE 00: HOME // HERO -->
+            <section class="scene active" data-page="home" id="scene-home">
+                <div class="hero">
+                    <div class="badge-terminal">
+                        <span class="badge-icon">⚡</span>
+                        <span class="badge-code">SEC_LEVEL // 01 · AUTHORITATIVE ARCHITECTURE</span>
                     </div>
 
-                    <!-- Bento 2: Anti-Dupe & Economy -->
-                    <div class="bento-card">
-                        <div class="card-icon-bubble purple-bubble">🔒</div>
-                        <h3>Atomic Anti-Dupe & Session Locking</h3>
-                        <p>Prevents cross-server item duplication, inventory rollbacks, and race-condition trade exploits that kill Roblox RPGs and trading economies.</p>
-                        <ul class="feature-bullets">
-                            <li>Multi-server session ownership flags.</li>
-                            <li>Crash-safe atomic DataStore transactions.</li>
-                            <li>Automatic stale session release & reconciliation.</li>
-                        </ul>
-                    </div>
+                    <h1 class="name">JV</h1>
+                    <div class="role">CYBERSECURITY & GAMEPLAY SYSTEMS ENGINEER</div>
 
-                    <!-- Bento 3: Locomotion & Physics -->
-                    <div class="bento-card">
-                        <div class="card-icon-bubble blue-bubble">⚡</div>
-                        <h3>Server-Authoritative Locomotion</h3>
-                        <p>Mathematical movement verification engine running on <code>RunService.Heartbeat</code>. Eliminates speedhacks, teleportation, fly exploits, and wall-penetration (NoClip).</p>
-                        <ul class="feature-bullets">
-                            <li>Horizontal (XZ) plane vector projection to isolate speed from jumping.</li>
-                            <li>Dynamic ping-buffer compensation based on round-trip latency.</li>
-                            <li>Continuous raycast trajectory tracking through solid colliders.</li>
-                        </ul>
-                    </div>
+                    <p class="note">
+                        Server-authoritative netcode, multi-vector anti-cheat engines, zero-client-trust state machines, and mathematical momentum verification. Built to withstand real-world exploiters without false positives.
+                    </p>
 
-                    <!-- Bento 4: Core Gameplay Systems -->
-                    <div class="bento-card">
-                        <div class="card-icon-bubble emerald-bubble">🎒</div>
-                        <h3>Custom Systems Architecture & Gameplay Engines</h3>
-                        <p>Need more than security? I engineer robust gameplay systems with clean architecture, strict type checking (<code>--!strict</code>), and zero memory leaks.</p>
-                        <div class="tags-cloud">
-                            <span class="tech-tag">Modular Inventories</span>
-                            <span class="tech-tag">Combat IK & Procedural Stances</span>
-                            <span class="tech-tag">Trading & Market Engines</span>
-                            <span class="tech-tag">Matchmaking & Round Managers</span>
-                            <span class="tech-tag">Clean State Machines</span>
-                            <span class="tech-tag">GC-Safe Object Pooling</span>
+                    <div class="hero-stats">
+                        <div class="stat-pill">
+                            <span class="stat-num">0%</span>
+                            <span class="stat-desc">False Positives</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-num">&lt;1ms</span>
+                            <span class="stat-desc">Heartbeat Validation</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-desc">Server Authority</span>
                         </div>
                     </div>
+
+                    <div class="hero-actions">
+                        <button class="explore-btn" data-go="1">
+                            <span class="target">↗</span>
+                            <span>EXPLORE SYSTEMS</span>
+                        </button>
+                        <a href="https://www.roblox.com/games/10768468868" target="_blank" rel="noopener noreferrer" class="test-btn">
+                            <span class="live-dot"></span>
+                            <span>LIVE TEST PLACE ↗</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Flagship Projects Showcase -->
-        <section class="section projects" id="projects">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p class="section-tag">PROVEN PORTFOLIO</p>
-                    <h2 class="section-title">Flagship Open Showcases</h2>
-                    <p class="section-desc">Test the live games on Roblox or inspect the production code directly on GitHub.</p>
-                </div>
+            <!-- SCENE 01: WORK // SYSTEMS SHOWCASE -->
+            <section class="scene" data-page="work" id="scene-work">
+                <div class="work">
+                    <div class="work-meta">
+                        <div class="badge-terminal">
+                            <span class="badge-code">// CORE ARCHITECTURE</span>
+                        </div>
+                        <h2 class="title">SYSTEMS</h2>
+                        <p class="note">Production-grade defense suites, real-time live staff consoles, and transactional anti-dupe frameworks.</p>
 
-                <div class="projects-container">
-                    <!-- Project 1: Aegis Anti-Cheat Suite -->
-                    <article class="project-card">
-                        <div class="project-header">
-                            <div class="project-titles">
-                                <div class="project-category">SECURITY ENGINE // NETCODE AUDIT</div>
-                                <h3 class="project-name">Aegis Server-Authoritative Anti-Cheat Suite</h3>
-                            </div>
-                            <span class="badge badge-success">Live on Roblox</span>
+                        <div class="project-nav">
+                            <button class="circle" id="prev" aria-label="Previous project">←</button>
+                            <span class="count" id="count">01 / 03</span>
+                            <button class="circle" id="next" aria-label="Next project">→</button>
                         </div>
 
-                        <p class="project-summary">
-                            A production-ready security engine built in Luau. Validates character locomotion, combat raycasts, and network packets with zero client trust. Includes a Cyber-Glassmorphic telemetry HUD and real-time Staff Ban & Strike Moderation Suite.
-                        </p>
-
-                        <div class="project-specs">
-                            <div class="spec-item">
-                                <span class="spec-label">Language</span>
-                                <span class="spec-value">Luau (--!strict)</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Physics Check</span>
-                                <span class="spec-value">Sub-Frame Raycasting</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Latency Buffer</span>
-                                <span class="spec-value">Rolling Ping Avg</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Architecture</span>
-                                <span class="spec-value">OOP Service Singleton</span>
+                        <div class="project-details" id="projectDetails">
+                            <h3 class="proj-name" id="detailName">Sentinel Anti-Cheat Suite</h3>
+                            <p class="proj-desc" id="detailDesc">Server-side mathematical physics validator against speed, flight, teleports, and raycasted noclip with Discord webhook incident telemetry.</p>
+                            <div class="proj-tags" id="detailTags">
+                                <span class="tag">Physics Validation</span>
+                                <span class="tag">Delta Raycasting</span>
+                                <span class="tag">Webhooks</span>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="project-highlights">
-                            <div class="highlight-pill">✓ Speedhack & Teleport Prevention</div>
-                            <div class="highlight-pill">✓ Wall Penetration (NoClip) Blocker</div>
-                            <div class="highlight-pill">✓ Freefall & Fly Altitude Budgeting</div>
-                            <div class="highlight-pill">✓ Token-Bucket Remote Rate Limiter</div>
-                            <div class="highlight-pill">✓ Memory-Safe Player Lifecycle Cleanup</div>
-                        </div>
+                    <div class="card-stage" id="cardStage">
+                        <article class="card" id="card">
+                            <div class="card-glass"></div>
+                            <div class="card-grid"></div>
+                            <div class="card-corner tl"></div>
+                            <div class="card-corner tr"></div>
+                            <div class="card-corner bl"></div>
+                            <div class="card-corner br"></div>
 
-                        <div class="project-actions">
-                            <a href="https://www.roblox.com/es/games/107695139582162/Server-Anti-Cheat-Moderation-Suite" target="_blank" rel="noopener" class="btn btn-primary">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.8 2.2L5.2 5.8 1.6 19.4l13.6-3.6L18.8 2.2zm-7.6 10.4l-2.4.6.6-2.4 2.4-.6-.6 2.4z"/></svg>
-                                <span>Play Live Demo Place</span>
+                            <!-- Showcase Visual / Graphic Mockup -->
+                            <div class="card-visual" id="cardVisual">
+                                <div class="visual-radar">
+                                    <div class="radar-line"></div>
+                                    <div class="radar-blip b1"></div>
+                                    <div class="radar-blip b2"></div>
+                                    <div class="radar-blip b3"></div>
+                                </div>
+                                <div class="visual-badge" id="cardBadge">SENTINEL SECURITY</div>
+                            </div>
+
+                            <div class="card-meta">
+                                <h3 class="card-name" id="cardName">Sentinel Anti-Cheat Suite</h3>
+                                <p class="card-copy" id="cardCopy">Real-time velocity clamping, gravity decay curves, and token-bucket remote sanitization.</p>
+                            </div>
+
+                            <a class="play" id="playBtn" href="https://github.com/lab2SecurityProjectsR/roblox-anticheat-suite" target="_blank" rel="noopener noreferrer" aria-label="View Project Source">
+                                <span class="play-icon">↗</span>
+                                <span class="play-label">VIEW CODE</span>
                             </a>
-                            <a href="https://github.com/lab2SecurityProjectsR/roblox-anticheat-suite" target="_blank" rel="noopener" class="btn btn-secondary">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                <span>GitHub Repository</span>
-                            </a>
-                            <a href="https://github.com/lab2SecurityProjectsR/roblox-anticheat-suite/blob/main/src/ServerScriptService/AntiCheat/MovementSecurityService.luau" target="_blank" rel="noopener" class="btn btn-outline">
-                                <span>Inspect Engine Script (.luau)</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: Server-Authoritative Inventory Architecture -->
-                    <article class="project-card">
-                        <div class="project-header">
-                            <div class="project-titles">
-                                <div class="project-category">DATA INTEGRITY // SYSTEMS ARCHITECTURE</div>
-                                <h3 class="project-name">Server-Authoritative Inventory & Anti-Dupe Architecture</h3>
-                            </div>
-                            <span class="badge badge-purple">Enterprise Architecture</span>
-                        </div>
-
-                        <p class="project-summary">
-                            Engineered for high-value RPG economies. Features atomic multi-server session locking, non-blanking hotbar slot equip toggles (Keys 1-5), dynamic Motor6D procedural combat stances, and 3D ViewportFrame visualizers.
-                        </p>
-
-                        <div class="project-specs">
-                            <div class="spec-item">
-                                <span class="spec-label">Data Safety</span>
-                                <span class="spec-value">Atomic Session Lock</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Combat Pose</span>
-                                <span class="spec-value">Dynamic Motor6D</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Equip State</span>
-                                <span class="spec-value">Non-Destructive Slot</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">UI Scope</span>
-                                <span class="spec-value">Functional Test Harness</span>
-                            </div>
-                        </div>
-
-                        <div class="project-highlights">
-                            <div class="highlight-pill">✓ Prevents Multi-Server Item Duplication</div>
-                            <div class="highlight-pill">✓ Procedural Arm Articulation (Upright Katana Guard)</div>
-                            <div class="highlight-pill">✓ Non-Blanking Hotbar Equip/Sheathe Toggles</div>
-                            <div class="highlight-pill">✓ 3D ViewportFrame Isometric Visualizers</div>
-                            <div class="highlight-pill">✓ Spatial Spatial Drop Verification & Auto-Cleanup</div>
-                        </div>
-
-                        <div class="project-actions">
-                            <button class="btn btn-primary" onclick="alert('Inventory Suite is currently undergoing private studio packaging. Contact me on Discord for live testing demo access!')">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.8 2.2L5.2 5.8 1.6 19.4l13.6-3.6L18.8 2.2zm-7.6 10.4l-2.4.6.6-2.4 2.4-.6-.6 2.4z"/></svg>
-                                <span>Request Demo Place Access</span>
-                            </button>
-                            <button class="btn btn-outline copy-discord-btn" data-discord="jorgevvv">
-                                <span>Inquire for Custom Integration</span>
-                            </button>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Architecture & Code Philosophy (Interactive Code Inspector) -->
-        <section class="section architecture" id="architecture">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p class="section-tag">ZERO CLIENT TRUST PHILOSOPHY</p>
-                    <h2 class="section-title">Amateur Scripts vs. Exploit-Proof Architecture</h2>
-                    <p class="section-desc">Why 95% of Roblox games suffer from exploits and dupe glitches — and how I solve them mathematically.</p>
-                </div>
+            <!-- SCENE 02: PRICING // SERVICES & TIERS -->
+            <section class="scene" data-page="pricing" id="scene-pricing">
+                <div class="pricing">
+                    <div class="pricing-content">
+                        <div class="badge-terminal">
+                            <span class="badge-code">// DEPLOYMENT PACKAGES</span>
+                        </div>
+                        <h2 class="title">TIERS</h2>
+                        <p class="note">Clean architecture. Flexible milestone delivery for indie releases and established studios.</p>
 
-                <div class="code-terminal-container">
-                    <div class="terminal-tabs">
-                        <button class="tab-btn active" data-tab="tab-speed">⚡ Movement Validation</button>
-                        <button class="tab-btn" data-tab="tab-remote">🛡️ Remote Hardening</button>
-                        <button class="tab-btn" data-tab="tab-dupe">🔒 Anti-Dupe Session</button>
-                    </div>
-
-                    <!-- Tab 1: Speed & Locomotion -->
-                    <div class="tab-pane active" id="tab-speed">
-                        <div class="code-comparison">
-                            <div class="code-box vulnerable">
-                                <div class="code-box-header">
-                                    <span class="box-badge badge-danger">❌ Amateur Approach (Vulnerable)</span>
-                                    <span class="file-name">LocalAntiCheat.client.luau</span>
+                        <div class="price-list">
+                            <div class="price-card">
+                                <div class="price-info">
+                                    <div class="tier-tag">TIER 01 // AUDIT & FIXES</div>
+                                    <strong>Vulnerability Audit & Remote Sanitization</strong>
+                                    <span>Review of current movement/combat remotes, token-bucket rate limiters, NaN & parameter bounds checking.</span>
                                 </div>
-                                <pre><code><span class="comment">-- Vulnerable: Checking WalkSpeed on the client</span>
-<span class="comment">-- Exploiters easily hook or delete this script in memory</span>
-humanoid:GetPropertyChangedSignal(<span class="str">"WalkSpeed"</span>):Connect(<span class="kw">function</span>()
-    <span class="kw">if</span> humanoid.WalkSpeed > <span class="num">16</span> <span class="kw">then</span>
-        player:Kick(<span class="str">"Speedhacking"</span>) <span class="comment">-- BYPASSED INSTANTLY</span>
-    <span class="kw">end</span>
-<span class="kw">end</span>)</code></pre>
-                                <div class="box-verdict">Exploiters simply delete the script or set the WalkSpeed property via memory pointers without firing Lua signals.</div>
+                                <div class="price-val">
+                                    <span class="val-usd">$15–$45 USD</span>
+                                    <span class="val-rbx">3K–8K RBX</span>
+                                </div>
                             </div>
 
-                            <div class="code-box secure">
-                                <div class="code-box-header">
-                                    <span class="box-badge badge-success">✓ JV's Exploit-Proof Engine</span>
-                                    <span class="file-name">MovementSecurityService.luau</span>
+                            <div class="price-card highlighted">
+                                <div class="popular-glow"></div>
+                                <div class="price-info">
+                                    <div class="tier-tag">TIER 02 // RECOMMENDED</div>
+                                    <strong>Modular Anti-Cheat Engine</strong>
+                                    <span>Authoritative speed/fly/noclip detection, custom momentum & grapple decay clamping, and automated Discord webhook alerts.</span>
                                 </div>
-                                <pre><code><span class="comment">-- Server-authoritative XZ plane displacement</span>
-<span class="kw">local</span> delta = currentPosition - record.LastValidCFrame.Position
-<span class="kw">local</span> hDist = Vector3.new(delta.X, <span class="num">0</span>, delta.Z).Magnitude
+                                <div class="price-val">
+                                    <span class="val-usd">$50–$120 USD</span>
+                                    <span class="val-rbx">10K–25K RBX</span>
+                                </div>
+                            </div>
 
-<span class="comment">-- Dynamic ping-adjusted latency threshold</span>
-<span class="kw">local</span> pingComp = record.PingBufferSeconds * Config.PingScale * <span class="num">60.0</span>
-<span class="kw">local</span> maxAllowed = (humanoid.WalkSpeed 
-    + Config.Buffer + pingComp) * dt
-
-<span class="kw">if</span> hDist > maxAllowed <span class="kw">then</span>
-    <span class="comment">-- Zero kinetic momentum & enforce server snapshot</span>
-    rootPart.AssemblyLinearVelocity = Vector3.zero
-    rootPart.CFrame = record.LastValidCFrame
-<span class="kw">end</span></code></pre>
-                                <div class="box-verdict">Calculated entirely on the server. Works regardless of client memory injectors, spoofed walkspeed, or physics hacks.</div>
+                            <div class="price-card">
+                                <div class="price-info">
+                                    <div class="tier-tag">TIER 03 // ENTERPRISE</div>
+                                    <strong>Full Security & Admin Infrastructure</strong>
+                                    <span>Anti-cheat suite + live in-game Staff Console (spectate toggle, live bans, threat feed) + Web Dashboard + custom telemetry.</span>
+                                </div>
+                                <div class="price-val">
+                                    <span class="val-usd">$140–$280 USD</span>
+                                    <span class="val-rbx">30K–65K RBX</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Tab 2: Remote Hardening -->
-                    <div class="tab-pane" id="tab-remote">
-                        <div class="code-comparison">
-                            <div class="code-box vulnerable">
-                                <div class="code-box-header">
-                                    <span class="box-badge badge-danger">❌ Blind Trust Remotes</span>
-                                    <span class="file-name">ShopServer.server.luau</span>
-                                </div>
-                                <pre><code><span class="comment">-- Vulnerable: Trusting client arguments</span>
-BuyItemRemote.OnServerEvent:Connect(<span class="kw">function</span>(player, itemName, price)
-    <span class="comment">-- Exploiter sends price = -9999999 or price = NaN</span>
-    playerData.Coins -= price
-    GiveItem(player, itemName)
-<span class="kw">end</span>)</code></pre>
-                                <div class="box-verdict">Exploiter calls Remote directly with negative numbers to generate infinite currency or crash data tables with NaN.</div>
-                            </div>
-
-                            <div class="code-box secure">
-                                <div class="code-box-header">
-                                    <span class="box-badge badge-success">✓ Sanitized & Rate-Limited</span>
-                                    <span class="file-name">RemoteSanitizer.luau</span>
-                                </div>
-                                <pre><code><span class="comment">-- Secure: Token bucket rate-limiting + server registry lookup</span>
-<span class="kw">if</span> <span class="kw">not</span> TokenBucket:Consume(player, <span class="str">"BuyItem"</span>) <span class="kw">then</span>
-    <span class="kw">return</span> <span class="comment">-- Flooding packet dropped silently</span>
-<span class="kw">end</span>
-
-<span class="comment">-- Never trust client-sent prices; fetch from server registry</span>
-<span class="kw">local</span> itemDef = ItemRegistry:Get(itemName)
-<span class="kw">if</span> <span class="kw">not</span> itemDef <span class="kw">or</span> profile.Coins < itemDef.Price <span class="kw">then</span>
-    <span class="kw">return</span>
-<span class="kw">end</span>
-
-profile.Coins -= itemDef.Price</code></pre>
-                                <div class="box-verdict">Token bucket prevents packet flooding; prices are strictly pulled from server memory, rendering parameter manipulation useless.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab 3: Anti-Dupe Session -->
-                    <div class="tab-pane" id="tab-dupe">
-                        <div class="code-comparison">
-                            <div class="code-box vulnerable">
-                                <div class="code-box-header">
-                                    <span class="box-badge badge-danger">❌ Naive DataStore Saving</span>
-                                    <span class="file-name">DataSaver.server.luau</span>
-                                </div>
-                                <pre><code><span class="comment">-- Vulnerable: Raw SetAsync on player leaving</span>
-Players.PlayerRemoving:Connect(<span class="kw">function</span>(player)
-    <span class="comment">-- Exploiters join two servers simultaneously or force-crash</span>
-    <span class="comment">-- causing race conditions and trade duplication</span>
-    DataStore:SetAsync(player.UserId, playerInventory[player])
-<span class="kw">end</span>)</code></pre>
-                                <div class="box-verdict">Prone to multi-server race conditions where an item is traded in Server A and simultaneously saved in Server B.</div>
-                            </div>
-
-                            <div class="code-box secure">
-                                <div class="code-box-header">
-                                    <span class="box-badge badge-success">✓ Atomic Session Locking</span>
-                                    <span class="file-name">DataSessionManager.luau</span>
-                                </div>
-                                <pre><code><span class="comment">-- Secure: Multi-server atomic session leasing</span>
-DataStore:UpdateAsync(storeKey, <span class="kw">function</span>(currentData)
-    <span class="kw">if</span> currentData.ActiveSession <span class="kw">and</span> (os.time() - currentData.LockTime) < <span class="num">120</span> <span class="kw">then</span>
-        <span class="kw">if</span> currentData.ActiveSession ~= currentServerJobId <span class="kw">then</span>
-            <span class="kw">return</span> <span class="kw">nil</span> <span class="comment">-- Reject concurrent load (Anti-Dupe Lock Active)</span>
-        <span class="kw">end</span>
-    <span class="kw">end</span>
-    currentData.ActiveSession = currentServerJobId
-    currentData.LockTime = os.time()
-    <span class="kw">return</span> currentData
-<span class="kw">end</span>)</code></pre>
-                                <div class="box-verdict">Only ONE server holds data lease. Eliminates multi-login trading dupes, force-crash duplication, and economy collapses.</div>
-                            </div>
+                    <!-- 3D Holographic Cyber Defense Core Matrix -->
+                    <div class="orbit">
+                        <div class="ring r1"></div>
+                        <div class="ring r2"></div>
+                        <div class="ring r3"></div>
+                        <div class="ring r4"></div>
+                        <div class="core-grid"></div>
+                        <div class="core">
+                            <div class="core-shield">🛡️</div>
+                            <span class="core-label">SENTINEL</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Workflow & Collaboration Standards -->
-        <section class="section workflow" id="workflow">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p class="section-tag">TRANSPARENT PROCESS</p>
-                    <h2 class="section-title">How I Collaborate With Developers & Clients</h2>
-                    <p class="section-desc">Clear communication, production-ready Rojo/Git standards, and zero guesswork.</p>
-                </div>
-
-                <div class="workflow-steps">
-                    <div class="workflow-card">
-                        <div class="step-num">01</div>
-                        <h4>Vulnerability Assessment & Scope</h4>
-                        <p>We review your existing game place or feature brief, identify attack surfaces (remotes, physics, economies), and agree on precise deliverables.</p>
+            <!-- SCENE 03: CONTACT // SECURE UPLINK -->
+            <section class="scene" data-page="contact" id="scene-contact">
+                <div class="contact">
+                    <div class="badge-terminal">
+                        <span class="badge-code">// ENCRYPTED TRANSMISSION</span>
                     </div>
-
-                    <div class="workflow-card">
-                        <div class="step-num">02</div>
-                        <h4>Server-Authoritative Implementation</h4>
-                        <p>Engineered using Rojo and Luau strict typing. Clean service architecture, decoupled modules, and performance-budgeted sub-frame loops.</p>
-                    </div>
-
-                    <div class="workflow-card">
-                        <div class="step-num">03</div>
-                        <h4>Stress-Testing & Exploit Simulation</h4>
-                        <p>We simulate packet flooding, latency spikes, and common exploit injection scenarios to verify zero false-positives and complete containment.</p>
-                    </div>
-
-                    <div class="workflow-card">
-                        <div class="step-num">04</div>
-                        <h4>Seamless Delivery & Post-Launch Support</h4>
-                        <p>Delivered via Git repository or <code>.rbxl</code> place with comprehensive documentation, clean configs, and post-integration monitoring.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact & Direct Hiring -->
-        <section class="section contact" id="contact">
-            <div class="container">
-                <div class="contact-card">
-                    <div class="contact-header text-center">
-                        <span class="badge badge-primary">LET'S CONNECT</span>
-                        <h2 class="contact-title">Ready to Exploit-Proof Your Game?</h2>
-                        <p class="contact-subtitle">
-                            Available for commissions, independent developer projects, and studio security audits.
-                        </p>
-                    </div>
+                    <h2 class="title">SECURE UPLINK</h2>
+                    <p class="note">Available for commissions, contract vulnerability audits, and launch-day security deployments. Share your game scope, mechanics, and timeline.</p>
 
                     <div class="contact-grid">
-                        <div class="contact-method">
-                            <div class="method-icon discord-icon">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                        <div class="contact-card copy-discord-card" id="btnDiscordMain">
+                            <div class="contact-card-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M19.54 5.34A16.3 16.3 0 0 0 15.44 4a11.2 11.2 0 0 0-.52 1.07 15.2 15.2 0 0 0-4.84 0A11.2 11.2 0 0 0 9.56 4a16.4 16.4 0 0 0-4.1 1.34C2.87 9.18 2.17 12.92 2.52 16.6a16.5 16.5 0 0 0 5.03 2.54c.41-.56.77-1.15 1.08-1.77-.59-.22-1.15-.5-1.69-.82l.42-.33c3.26 1.51 6.79 1.51 10.01 0l.43.33c-.54.32-1.11.6-1.69.82.31.62.67 1.21 1.08 1.77a16.5 16.5 0 0 0 5.03-2.54c.42-4.27-.72-7.97-2.68-11.26ZM8.96 14.34c-.98 0-1.79-.9-1.79-2s.79-2 1.79-2c1.01 0 1.81.91 1.79 2 0 1.1-.79 2-1.79 2Zm6.08 0c-.98 0-1.79-.9-1.79-2s.79-2 1.79-2c1.01 0 1.81.91 1.79 2 0 1.1-.78 2-1.79 2Z"/></svg>
                             </div>
-                            <div class="method-info">
-                                <span class="method-label">Direct Discord Message</span>
-                                <span class="method-val">jorgevvv</span>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">DIRECT DISCORD COMMS</span>
+                                <strong class="contact-card-val" id="discordHandle">paco289319</strong>
+                                <span class="contact-hint" id="discordHint">Click to copy username</span>
                             </div>
-                            <button class="btn btn-primary btn-sm copy-discord-btn" data-discord="jorgevvv">
-                                <span>Copy Handle</span>
-                            </button>
+                            <div class="copy-badge" id="copyBadge">COPY</div>
                         </div>
 
-                        <div class="contact-method">
-                            <div class="method-icon roblox-icon">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.8 2.2L5.2 5.8 1.6 19.4l13.6-3.6L18.8 2.2zm-7.6 10.4l-2.4.6.6-2.4 2.4-.6-.6 2.4z"/></svg>
+                        <a href="https://github.com/lab2SecurityProjectsR" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                             </div>
-                            <div class="method-info">
-                                <span class="method-label">Roblox Developer Profile</span>
-                                <span class="method-val">narutodsfsdfsd</span>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">OPEN SOURCE SUITES</span>
+                                <strong class="contact-card-val">lab2SecurityProjectsR</strong>
+                                <span class="contact-hint">Browse code repositories ↗</span>
                             </div>
-                            <a href="https://www.roblox.com/users/2319549925/profile" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-                                <span>View Profile</span>
-                            </a>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="method-icon github-icon">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                            </div>
-                            <div class="method-info">
-                                <span class="method-label">GitHub Architecture Hub</span>
-                                <span class="method-val">lab2SecurityProjectsR</span>
-                            </div>
-                            <a href="https://github.com/lab2SecurityProjectsR" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-                                <span>Explore Repos</span>
-                            </a>
-                        </div>
+                            <div class="copy-badge">OPEN</div>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-left">
-                <span class="brand-shield">🛡️</span>
-                <span>JV // LAB2 SECURITY PROJECTS</span>
-                <span class="footer-sep">•</span>
-                <span>Server Architecture & Exploit-Proofing</span>
-            </div>
-            <div class="footer-right">
-                <span>© 2026 JV. Built for high-integrity Roblox experiences.</span>
-            </div>
         </div>
-    </footer>
 
-    <!-- Toast Notification Element -->
-    <div class="toast" id="toastNotification" role="alert" aria-live="polite">
-        <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        <span id="toastMessage">Discord handle copied to clipboard!</span>
-    </div>
+        <!-- Left Vertical Floating Navigation Rail -->
+        <nav class="rail" aria-label="Navigation Scenes">
+            <button class="dot-hit active" data-go="0" aria-label="Root / Home">
+                <span class="dot"></span>
+                <span class="dot-label">00 // ROOT</span>
+            </button>
+            <button class="dot-hit" data-go="1" aria-label="Systems / Work">
+                <span class="dot"></span>
+                <span class="dot-label">01 // SYSTEMS</span>
+            </button>
+            <button class="dot-hit" data-go="2" aria-label="Deployment Tiers">
+                <span class="dot"></span>
+                <span class="dot-label">02 // TIERS</span>
+            </button>
+            <button class="dot-hit" data-go="3" aria-label="Secure Uplink / Contact">
+                <span class="dot"></span>
+                <span class="dot-label">03 // UPLINK</span>
+            </button>
+        </nav>
+
+        <!-- Toast Feedback for Clipboard Actions -->
+        <div class="cyber-toast" id="toast">
+            <span class="toast-icon">✓</span>
+            <span class="toast-msg" id="toastMsg">DISCORD TAG COPIED TO CLIPBOARD</span>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
